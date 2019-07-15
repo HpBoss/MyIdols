@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Idols</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/p-animation.css"/>
+	<link rel="stylesheet" type="text/css" href="css/basic.css"/>	
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/aos.css"/>
+	<script src="js/aos.js"></script>
+  
+</head>
+<style >
+	/* 评论区输入信息栏 */
+	input::-webkit-input-placeholder{
+		font-size: 20px;
+	}
+	/* textarea字体 */
+	#veditor{
+		font-size: 15px;
+	}
+	/* 卡片式轮播 */
+	.swiper-container {
+	  width: 100%;
+	  padding-top: 50px;
+	  padding-bottom: 50px;
+	}
+	.swiper-slide {
+	  background-position: center;
+	  background-size: cover;
+	  width: 300px;
+	  height: 250px;
+	  color: black;
+	  background: white;
+	}
+	.font-p{
+		font-size: 20px;
+	}
+	/* h3标签属性 */
+	.hthree{
+		font-size: 22px;
+		font-family: "微软雅黑";
+		color: black; 
+		display: inline-block;
+		margin: 0; 
+		vertical-align: middle;
+	}
+	/* 头像底部外边距 */
+	.img-bottom{
+		margin-bottom: 20px;
+	}
+	.reason{
+		width: 80%;
+	}
+	
+</style>
+<body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+			<img src="images/idol.png" style="float: left;">
+            <a class="navbar-brand">My Idols</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#ad-carousel">HOME</a></li>
+                <li><a href="#summary-container">Intro</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Idol<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+						<li><a href="#roger" data-tab="tab-roger">Roger Federer</a></li>
+                        <li><a href="#james" data-tab="tab-lebron">LeBron James</a></li>
+                        <li><a href="#kobe" data-tab="tab-kobe">Kobe Bryant</a></li>
+                        <li><a href="#shou" data-tab="tab-shou">17_shou</a></li>
+                    </ul>
+                </li>
+				<li><a href="#comment">Comment</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">About</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 广告轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/roger/roger.jpg" alt="1 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Roger Federer</h1>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/James.jpg" alt="2 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>LeBron James</h1>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/kobe/kebi2.jpg" alt="3 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Kobe Bryant</h1>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/17_shou.png" alt="4 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>17_shou</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+<!-- 主要内容 -->
+<div class="container summary" >
+    <!-- 简介 -->
+    <div class="row" id="summary-container">
+        <div class="col-md-3 "  data-aos="fade-right">
+            <img class="img-circle" src="images/roger-header.png" alt="费德勒">
+            <h2>Roger Federer</h2>
+            <p><a class="btn btn-default" href="https://baike.baidu.com/item/%E7%BD%97%E6%9D%B0%C2%B7%E8%B4%B9%E5%BE%B7%E5%8B%92/7194432?fromtitle=%E8%B4%B9%E5%BE%B7%E5%8B%92&fromid=399071&fr=aladdin" role="button">了解详情</a></p>
+        </div>
+        <div class="col-md-3 "  data-aos="fade-right">
+            <img class="img-circle" src="images/James-header.png" alt="詹姆斯">
+            <h2>LeBron James</h2>
+            <p><a class="btn btn-default" href="https://baike.baidu.com/item/%E5%8B%92%E5%B8%83%E6%9C%97%C2%B7%E8%A9%B9%E5%A7%86%E6%96%AF/1989503?fromtitle=%E8%A9%B9%E5%A7%86%E6%96%AF&fromid=14189565" role="button">了解详情</a></p>
+        </div>
+        <div class="col-md-3 " data-aos="fade-left">
+            <img class="img-circle" src="images/kobe-header.png" alt="科比">
+            <h2>Kobe Bryant</h2>
+            <p><a class="btn btn-default" href="https://baike.baidu.com/item/%E7%A7%91%E6%AF%94%C2%B7%E5%B8%83%E8%8E%B1%E6%81%A9%E7%89%B9/318773?fromtitle=%E7%A7%91%E6%AF%94&fromid=133066" role="button">了解详情</a></p>
+        </div>
+		<div class="col-md-3 " data-aos="fade-left">
+		    <img class="img-circle" src="images/shou-header.png" alt="17_shou">		
+		    <h2>17_shou</h2>		
+		    <p><a class="btn btn-default" href="https://www.weibo.com/u/3602763535" role="button">了解详情</a></p>
+		</div>
+	</div>
+    <!-- 特性 -->
+    <hr class="feature-divider"><!-- 分割线 -->
+	<!-- 四个单独内容 -->
+	<!-- 费德勒 -->
+    <div class="container content" id="roger">
+		<h3 class="name">Roger Federer</h3>
+		<div class="row">
+			<div class="col-md-1" style="width: 200px;">
+				<img class="img-rounded img-bottom" src="images/roger-header.png" alt="roger-header" data-aos="flip-right">
+			</div>
+			<div class="col-md-8 reason">
+				<h4 class="text-success" style="display: block;">偶像理由:</h4>
+				<p class="bg-success">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;罗杰*费德勒,在我心中他是21世纪最伟大的网球运动员,招牌式的翻拍击球、沉稳的打球风格、
+					职业生涯低谷时的坚韧、场外自律的生活习惯;如今已经38岁的费德勒仍还坚持在网球场上,做自己喜欢的事情,这种坚持是许多人无法做到的。
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<img src="images/trophy.png" alt="奖杯">
+				<h3 class="hthree">生涯荣誉</h3>	
+			</div>
+			<div class="col-md-2 col-md-offset-2">
+				<img src="images/ic-video.png" alt="视频">
+				<h3 class="hthree">经典时刻</h3>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col-md-4 grade-border">
+				<ul style="font-size: 15px;" data-aos="fade-right">
+					<li class="honor" ><a href="#">大满贯冠军：20个</a></li>	
+					<br>
+					<li class="honor" ><a href="#">生涯冠军头衔：101个</a></li>
+					<br>
+					<li class="honor" ><a href="#">黄金赛/ATP500：22个</a></li>
+					<br>
+					<li class="honor" ><a href="#">国际赛/ATP250：25个</a></li>
+					<br>
+					<li class="honor"><a href="#">大师赛/ATP1000：28个</a></li>
+					<br>
+					<li class="honor" ><a href="#">大师杯/年终总决赛：6个</a></li>
+					<br>
+					<li class="honor" ><a href="#">302周男子单打世界排名第一</a></li>
+					<br>
+					<li class="honor" ><a href="#">劳伦斯世界体育奖最佳男运动员：5个</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-md-offset-2">
+				<video width="570px" height="323px" controls="controls"	style="border: 1px solid gold;">
+					<source src="video/roger-video.mp4" type="video/mp4"></source>
+					<!-- <source src="myvideo.ogv" type="video/ogg"></source>
+					<source src="myvideo.webm" type="video/webm"></source> -->
+					<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+						<param name="movie" value="myvideo.swf" />
+						<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+					</object>
+					当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+				</video>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<img src="images/roger-picture.png" >
+				<h3 class="hthree">精彩图集</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="swiper-container" data-aos="fade-up">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/roger/roger1.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">2017年温网冠军</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/roger/roger3.jpg" width="300px" >
+						</div>
+						<div class="details">
+							<h3 class="font-p" style="text-align: center">美网冠军</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/roger/roger4.jpg" width="300px" >
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">澳网赛后采访</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/roger/roger5.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">2017澳网夺冠</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/roger/roger7.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">2010法网比赛</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/roger/roger8.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">温网比赛发球</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/roger/roger9.jpeg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">温网决赛反派切球</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/roger/roger10.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">2017澳网接球</h3>
+						</div>
+					</div>
+			  </div>
+			  <!-- Add Pagination -->
+			  <div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<!-- 分割线 -->
+		<hr class="feature-divider">
+	</div>
+	<!-- 詹姆斯 -->
+	<div class="container content" id="james">
+		<h3 class="name">LeBron James</h3>
+		<div class="row">
+			<div class="col-md-1" style="width: 200px;">
+				<img class="img-rounded img-bottom" src="images/James-header.png" alt="james-header" data-aos="flip-right">
+			</div>
+			<div class="col-md-8 reason">
+				<h4 class="text-success" style="display: block;">偶像理由:</h4>
+				<p class="bg-success">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;勒布朗*詹姆斯，始终将球队的胜利放在首位,通过突破吸引防守为队友创造投篮空间，超高的篮球智商往往能深入解读比赛，关键时刻挺身而出，
+					带领球队前进；球场外合理的饮食、锻炼，面对外界的诱惑他自己也体现了极高的自律性。
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<img src="images/trophy.png" alt="奖杯">
+				<h3 class="hthree">生涯荣誉</h3>	
+			</div>
+			<div class="col-md-2 col-md-offset-2">
+				<img src="images/ic-video.png" alt="视频">
+				<h3 class="hthree">经典时刻</h3>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col-md-4 grade-border">
+				<ul style="font-size: 15px;" data-aos="fade-right">
+					<li class="honor" ><a href="#">NBA最佳新秀</a></li>
+					<br>
+					<li class="honor" ><a href="#">NBA总冠军：3个</a></li>	
+					<br>
+					<li class="honor" ><a href="#">奥运会冠军：2个</a></li>
+					<br>
+					<li class="honor" ><a href="#">NBA全明星MVP：3个</a></li>
+					<br>
+					<li class="honor" ><a href="#">NBA常规赛MVP：4个</a></li>
+					<br>
+					<li class="honor" ><a href="#">NBA总决赛FMVP：3个</a></li>
+					<br>
+					<li class="honor" ><a href="#">12次入选NBA第一阵容</a></li>
+					<br>
+					<li class="honor" ><a href="#">个人连续8年闯入NBA总决赛</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-md-offset-2">
+				<video width="570px" height="323px" controls="controls"	style="border: 1px solid gold;">
+					<source src="video/lebran-video.mp4" type="video/mp4"></source>
+					<!-- <source src="myvideo.ogv" type="video/ogg"></source> 
+					<source src="myvideo.webm" type="video/webm"></source> -->
+					<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+						<param name="movie" value="myvideo.swf" />
+						<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+					</object>
+					当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+				</video>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<figure></figure>
+				<img src="images/roger-picture.png" >
+				<h3 class="hthree">精彩图集</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="swiper-container" data-aos="fade-up">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/lebran/lebran2.png" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">2017NBA总冠军</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/lebran/lebran3.jpeg" width="300px" >
+						</div>
+						<div class="details">
+							<h3 class="font-p" style="text-align: center">重返骑士</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/lebran/lebran11.jpg" width="300px" >
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">飞翔扣篮</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/lebran/lebran6.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">2010年转会至迈阿密热火</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/lebran/lebran7.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">美国男篮</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/lebran/lebran12.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">2012热火夺冠</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/lebran/lebran9.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">热火时期</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/lebran/lebran10.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">骑士季后赛</h3>
+						</div>
+					</div>
+				</div>
+			  <!-- Add Pagination -->
+			  <div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<hr class="feature-divider"><!-- 分割线 -->
+	</div>
+	<!-- 科比 -->
+	<div class="container content" id="kobe">
+		<h3 class="name">Kobe Bryant</h3>
+		<div class="row">
+			<div class="col-md-1" style="width: 200px;">
+				<img class="img-rounded img-bottom" src="images/kobe-header.png" alt="james-header" data-aos="flip-right">
+			</div>
+			<div class="col-md-8 reason">
+				<h4 class="text-success" style="display: block;">偶像理由:</h4>
+				<p class="bg-success">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;科比*布莱恩特，进入联盟开始就有着超越篮球之神（乔丹）的目标，与奥尼尔一起夺下三连冠,迎来湖人新的王朝
+					他对比赛的掌控欲超越NBA史上所有球员，单场81分的神迹现在回想起来还是不可思议的事情，逆境中总能给我们分享不可思议的绝杀，那美如画的投篮动作永远都是经典。
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<img src="images/trophy.png" alt="奖杯">
+				<h3 class="hthree">生涯荣誉</h3>	
+			</div>
+			<div class="col-md-2 col-md-offset-2">
+				<img src="images/ic-video.png" alt="视频">
+				<h3 class="hthree">经典时刻</h3>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="col-md-4 grade-border">
+				<ul style="font-size: 15px;" data-aos="fade-right">
+					<li class="honor" ><a href="#">NBA总冠军：5个</a></li>	
+					<br>
+					<li class="honor" ><a href="#">奥运会冠军：2个</a></li>
+					<br>
+					<li class="honor" ><a href="#">NBA全明星MVP：4个</a></li>
+					<br>
+					<li class="honor" ><a href="#">NBA常规赛MVP：1个</a></li>
+					<br>
+					<li class="honor" ><a href="#">NBA总决赛FMVP：2个</a></li>
+					<br>
+					<li class="honor" ><a href="#">11次入选NBA第一阵容</a></li>
+					<br>
+					<li class="honor" ><a href="#">18次入选NBA全明星赛</a></li>
+					<br>
+					<li class="honor" ><a href="#">NBA全明星赛扣篮大赛冠军：1次</a></li>			
+				</ul>
+			</div>
+			<div class="col-md-6 col-md-offset-2">
+				<video width="570px" height="323px" controls="controls"	style="border: 1px solid gold;">
+					<source src="video/kobe-video.mp4" type="video/mp4"></source>
+					<!-- <source src="myvideo.ogv" type="video/ogg"></source> 
+					<source src="myvideo.webm" type="video/webm"></source> -->
+					<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+						<param name="movie" value="myvideo.swf" />
+						<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+					</object>
+					当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+				</video>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<figure></figure>
+				<img src="images/roger-picture.png" >
+				<h3 class="hthree">精彩图集</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="swiper-container" data-aos="fade-up">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/kobe/kebi1.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">杀手本色</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/kobe/kebi2.jpg" width="300px" >
+						</div>
+						<div class="details">
+							<h3 class="font-p" style="text-align: center">NBA总冠军</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/kobe/kebi3.jpg" width="300px" >
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">The Black Mamba</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/kobe/kebi4.png" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">1997年扣篮大赛冠军</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/kobe/kebi5.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">庆祝冠军登上技术台</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/kobe/kebi6.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">紫金黑曼巴</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/kobe/kebi8.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">NBA Champion</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/kobe/kebi9.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">81分神迹</h3>
+						</div>
+					</div>
+				</div>
+			  <!-- Add Pagination -->
+			  <div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<hr class="feature-divider"><!-- 分割线 -->
+	</div>
+	<!-- 17_shou -->
+	<div class="container content" id="shou">
+		<h3 class="name">17_shou</h3>
+		<div class="row">
+			<div class="col-md-1" style="width: 200px;">	
+				<img class="img-rounded img-bottom" src="images/shou-header.png" alt="james-header" data-aos="flip-right">
+			</div>
+			<div class="col-md-8 reason">
+				<h4 class="text-success" style="display: block;">偶像理由:</h4>
+				<p class="bg-success">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17_shou是我见过的少有能将颜值与技术结合的职业选手(哈哈);他有千里眼,500米开外能轻松发现敌人;他有顺风耳,200米开外能判定枪声的位置;
+					他有超快的反应速度,天堂度假村一人单挑五人;他有一颗体贴的心,对粉丝和表妹极好(哈哈)。
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<img src="images/trophy.png" alt="奖杯">
+				<h3 class="hthree">生涯荣誉</h3>	
+			</div>
+			<div class="col-md-2 col-md-offset-2">
+				<img src="images/ic-video.png" alt="视频">
+				<h3 class="hthree">经典时刻</h3>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="col-md-4 grade-border">
+				<ul style="font-size: 15px;" data-aos="fade-right">
+					<li class="honor" ><a href="#">QGC新春邀请赛冠军</a></li>	
+					<br>
+					<li class="honor" ><a href="#">黄金大奖赛第四季冠军</a></li>
+					<br>
+					<li class="honor" ><a href="#">黄金大奖赛第六季亚军</a></li>
+					<br>
+					<li class="honor" ><a href="#">PCPI中国职业邀请赛亚军</a></li>
+					<br>
+					<li class="honor" ><a href="#">PCPI中国职业邀请赛总冠军</a></li>
+					<br>
+					<li class="honor" ><a href="#">PAI绝地求生亚洲邀请赛季军</a></li>
+					<br>
+					<li class="honor" ><a href="#">澳门电竞嘉年华绝地求生项目冠军</a></li>						
+				</ul>
+			</div>
+			<div class="col-md-6 col-md-offset-2">
+				<video width="570px" height="323px" controls="controls"	style="border: 1px solid gold;">
+					<source src="video/shou-video.mp4" type="video/mp4"></source>
+					<!-- <source src="myvideo.ogv" type="video/ogg"></source> 
+					<source src="myvideo.webm" type="video/webm"></source> -->
+					<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+						<param name="movie" value="myvideo.swf" />
+						<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+					</object>
+					当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+				</video>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<figure></figure>
+				<img src="images/roger-picture.png" >
+				<h3 class="hthree">精彩图集</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="swiper-container" data-aos="fade-up">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/shou/shou1.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">17最早的战队服</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/shou/shou4.jpg" width="300px" >
+						</div>
+						<div class="details">
+							<h3 class="font-p" style="text-align: center">PCL 17_shou MVP</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/shou/shou3.png" width="300px" >
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">粉丝合照</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/shou/shou2.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">视频集锦海报</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/shou/shou8.png" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">17战队FGS合照</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/shou/shou5.png" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">FGS现场粉丝</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/shou/shou7.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">FGS作战席</h3>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="imgBx">
+						  	<img class="img-rounded" src="images/shou/shou6.jpg" width="300px">
+						</div>
+						<div class="details">
+						  	<h3 class="font-p" style="text-align: center">17动物园宣传海报</h3>
+						</div>
+					</div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<hr class="feature-divider"><!-- 分割线 -->
+	</div>
+	<!-- 评论区 -->
+	<div id="comment" style="font-size: 21px"></div>
+	<!-- 关于 -->
+    <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="modal-label">About</h4>
+                </div>
+                <div class="modal-body">
+                    <p>每一个偶像他们身上都有值得我们去学习的东西,成功的背后每个人付出努力的方式可能不同，但都在朝着一个正确的方向前行,
+					我们也没必要一直盼望成为自己偶像那样,我们每个人在社会中的分工不同,执着于我们不擅长的事情,必定是走错了方向。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 返回至顶部 -->
+<div>
+	<a href="javascript:goTop()" class="toolbar"></a>
+</div>
+<!-- 底部栏 -->
+<footer style="background: #333;width: 100%; padding: 10px;">
+	<p class="footer-p" >&nbsp;&nbsp;联系电话：19980492664</p>	
+	<p class="footer-p" >&nbsp;&nbsp;电子邮箱：seventywolf@qq.com</p>
+	<p class="footer-p" >&nbsp;&nbsp;四川师范大学 计算机科学学院 软件工程4班 By 何飘</p>
+	<p class="footer-p" >&nbsp;&nbsp;All Right Reserved.2019 IDOL </p>
+</footer>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper.js" type="text/javascript" charset="utf-8"></script>
+<!-- goTop -->
+<script type="text/javascript">
+	function goTop(){
+		document.documentElement.scrollTop=0;
+	}
+</script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+	  },
+	  initialSlide: 3
+    });
+</script>
+<!-- Initialize AOS -->
+<script>
+	AOS.init({
+		duration:2000,
+	});
+</script>
+
+<!-- comment area -->
+<script src="js/av-min.js"></script>
+<script src="js/Valine.min.js"></script>
+<script>
+	new Valine({
+		el: '#comment',
+		appId: 'BaRIUVT1h4SVuShTLvTRmMnH-gzGzoHsz',
+		appKey: 'hQrKCMMCa1XLIuf4iqoqp0M9',
+		placeholder: '快来评论吧！~(我会在评论区抽取一名小伙伴，送上10元红包,请填写正确的支付宝账号)',
+		avatar:'robohash'
+	})
+</script>
+</body>
+</html>

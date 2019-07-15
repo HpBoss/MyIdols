@@ -1,0 +1,142 @@
+body{
+	color: #5a5a5a;
+	background: #DCDCDC;
+}
+/* 简介 */
+
+/* 荣誉框表单 */
+	.honor{
+		width: 100%;
+		text-align: left;
+	}
+/* 头像框上方名字 */
+.name{
+	border-bottom:1px solid #101010;
+	width: -webkit-fit-content;
+}
+/* 生涯荣誉框属性设置 */
+.grade-border{
+		border: 1px solid yellow; 
+		width: 300px;
+		height: 325px;
+		padding: 0;
+		margin-left: 15px;
+	}
+/* 轮播广告 */
+.carousel {
+	height: 500px;
+	margin-bottom: 60px;
+}
+
+.carousel .item {
+	height: 500px;
+	background-color: #000;
+}
+
+.carousel .item img {
+	width: 100%;
+}
+
+.carousel-caption {
+	z-index: 10;
+}
+
+.carousel-caption p {
+	margin-bottom: 20px;
+	font-size: 20px;
+	line-height: 1.8;
+}
+/* 字体 */
+.bg-success{
+	/* background-color:#dff0d8; */
+	display: block;
+	font-size: 20px;
+	font-family:arial;
+}
+/* 简介 */
+.content{
+	padding-left:30px;
+}
+.summary .col-md-3 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+/* 特性 */
+.feature-divider {
+	margin: 40px 0;
+}
+.line-bottom{
+	margin:0 ;
+}
+.feature {
+	padding: 30px 0;
+}
+
+.feature-heading {
+	font-size: 50px;
+	color: #2a6496;
+}
+
+.feature-heading .text-muted {
+	font-size: 28px;
+}
+
+/* 响应式布局 */
+
+@media (max-width: 768px) {
+.summary {
+	padding-right: 3px;
+	padding-left: 3px;
+}
+
+.carousel {
+	height: 300px;
+	margin-bottom: 30px;
+}
+
+.carousel .item {
+	height: 300px;
+}
+
+.carousel img {
+	min-height: 400px;
+}
+
+.carousel-caption p {
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+.feature-heading {
+	font-size: 34px;
+}
+
+.feature-heading .text-muted {
+	font-size: 22px;
+}
+}
+
+@media (min-width: 992px) {
+	.feature-heading {
+		margin-top: 120px;
+	}
+}
+.toolbar{
+	border:1px solid #ccc;
+	position: fixed;
+	right: 2%;
+	bottom: 8%;
+	width: 48px;
+	height: 48px;
+	display:block;
+	background: url(../images/back-top.png);
+}
+/* 底部栏 */
+.footer-p{
+	color: white;
+	padding-left: 20%;
+}
+.feature-footer{
+	background: black;
+	width: 100%;
+}
